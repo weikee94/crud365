@@ -11,3 +11,4 @@
 - brew install mongodb
 - brew info mongodb (check version and see command)
 - npm install mongodb --save
+- yarn add classnames
