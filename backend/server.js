@@ -12,7 +12,6 @@ mongodb.MongoClient.connect(dbUrl, (err, client) => {
 
     const db = client.db("crud");
 
-
     app.get('/api/games', (req, res) => {
         db.collection('games').find({}).toArray((err, games) => {
             res.json({ games });

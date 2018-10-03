@@ -4,6 +4,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 import GamePages from './components/gamesPage';
+import GameForm from './components/gameForm';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers';
@@ -25,11 +26,12 @@ ReactDOM.render(
         <div className="ui container">
             <div className="ui three item menu"> 
                 <NavLink className="item" to="/" exact={true} activeClassName="active">Home</NavLink>  
-                <NavLink className="item" to="/games" activeClassName="active">Games</NavLink>  
+                <NavLink className="item" to="/games" exact={true} activeClassName="active">Games</NavLink>  
                 <NavLink className="item" to="/games/new" activeClassName="active">Add New Game</NavLink>  
             </div>
             <Route path="/" component={App} exact={true}/>
-            <Route path="/games" component={GamePages} />
+            <Route path="/games" exact={true} component={GamePages} />
+            <Route path="/games/new" component={GameForm} />
             <App />
         </div>
     </Router>
