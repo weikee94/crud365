@@ -1,3 +1,4 @@
 - create-react-app folderName
 - yarn add redux react-redux
 - yarn add redux-logger redux-devtools-extension --dev
+- yarn add react-router-dom
