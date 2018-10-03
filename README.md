@@ -8,3 +8,6 @@
 - npm install express --save
 - npm install nodemon --save-dev
 - npm install --save-dev babel-cli babel-preset-env
+- brew install mongodb
+- brew info mongodb (check version and see command)
+- npm install mongodb --save
