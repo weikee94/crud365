@@ -9,8 +9,21 @@ export const setGames = (games) => {
 
 export const fetchGames = () => {
     return dispatch => {
-        fetch('api/games')
+        fetch('/api/games')
             .then(res => res.json())
             .then(data => dispatch(setGames(data.games)))
+    }
+}
+
+export const saveGame = (data) => {
+    return dispatch => {
+        fetch('/api/games', {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
     }
 }
